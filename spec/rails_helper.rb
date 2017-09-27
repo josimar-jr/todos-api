@@ -2,6 +2,9 @@
 require 'database_cleaner'
 
 # [...]
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+
+# [...]
 # configure shoulda matchers to use rspec as the test framework and full matcher libraries
 Shoulda::Matchers.configure do |config|
 	config.integrate do |with|
