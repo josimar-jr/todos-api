@@ -20,6 +20,9 @@ RSpec.configuration do |config|
 	# config.include FactoryGirl::Syntax::Methods
 	# ^^^A carga ficou dentro do arquivo /spec/support/factory_girl.rb
 
+	# inclui o modulo especifico para helper de my_json
+	# config.include RequestSpecHelper, type: :request
+
 	# start by truncating all the table but then use the faster transaction strategy the rest of the time
 	config.before(:suite) do
 		DatabaseCleaner.clean_with(:truncation)
