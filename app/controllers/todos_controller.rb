@@ -21,7 +21,8 @@ class TodosController < ApplicationController
 
   # PUT /todos/:id
   def update
-
+    @todo.update(todo_params)
+    head :no_content
   end
 
   # DELETE /todos/:id
