@@ -9,7 +9,7 @@ RSpec.describe 'Items API' do
   let(:id) { items.first.id }
 
   # Test suite for GET /todos/:todos_id/items
-  describe 'GET /todos/:todos_id/items' do
+  describe 'GET /todos/:todo_id/items' do
     before { get "/todos/#{todo_id}/items" }
 
     context 'when todo exists' do
@@ -67,7 +67,7 @@ RSpec.describe 'Items API' do
     let(:valid_attributes) { { name: 'Visit Narnia', done: false } }
 
     context 'when request attributes are valid' do
-      before { post "/todos/#{todo_id}/items", params: :valid_attributes }
+      before { post "/todos/#{todo_id}/items", params: valid_attributes }
 
       it 'returns status code 201' do
         expect(response).to have_http_status(201)
@@ -75,7 +75,7 @@ RSpec.describe 'Items API' do
     end
 
     context 'when an invalid request' do
-      before { post "todos/#{todo_id}/items", params: {} }
+      before { post "/todos/#{todo_id}/items", params: {} }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)
@@ -91,7 +91,7 @@ RSpec.describe 'Items API' do
   describe 'PUT /todos/:todo_id/items/:id' do
     let(:valid_attributes) { { name: 'Mozart' } }
 
-    before { put "/todos/#{todo_id}/items/#{id}", params: :valid_attributes }
+    before { put "/todos/#{todo_id}/items/#{id}", params: valid_attributes }
 
     context 'when item exists' do
       it 'returns status code 204' do
@@ -119,7 +119,7 @@ RSpec.describe 'Items API' do
 
   # Test suite for DELETE /todos/:id
   describe 'DELETE /todos/:id' do
-    before { delete "todos/#{todo_id}/items/#{id}" }
+    before { delete "/todos/#{todo_id}/items/#{id}" }
 
     it 'returns status code 204' do
       expect(response).to have_http_status(204)

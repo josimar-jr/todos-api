@@ -5,18 +5,18 @@ class ItemsController < ApplicationController
 
   # GET /todos/:todo_id/items
   def index
-    json_respose(@todo.items)
+    json_response(@todo.items)
   end
 
   # GET /todos/:todo_id/items/:id
   def show
-    json_respose(@item)
+    json_response(@item)
   end
 
   # POST /todos/:todo_id/items
   def create
     @todo.items.create!(item_params)
-    json_respose(@todos, :created)
+    json_response(@todos, :created)
   end
 
   # PUT /todos/:todo_id/items/:id
@@ -37,7 +37,7 @@ class ItemsController < ApplicationController
     end
 
     def set_todo
-      @todo = Todo.find(params[:id])
+      @todo = Todo.find(params[:todo_id])
     end
 
     def set_todo_item
