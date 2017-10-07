@@ -31,7 +31,6 @@ Things you may want to cover:
 running the TEST commands
 ```
 bundle install
-rails generate rspec:install
 mkdir spec/factories
 rails db:migrate
 rake db:test:prepare
