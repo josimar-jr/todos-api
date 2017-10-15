@@ -1,5 +1,7 @@
 # app/controllers/user_controller.rb
 class UserController < ApplicationController
+  skip_before_action :authorize_request, only: :create
+
   # POST /signup
   # return authenticated token upon signup
   def create 
