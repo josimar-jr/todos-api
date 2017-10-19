@@ -13,13 +13,13 @@ RSpec.describe 'Authentication', type: :request do
       {
         email: user.email,
         password: user.password
-    }.to_json
+      }.to_json
     end
     let(:invalid_credentials) do
       {
         email: Faker::Internet.email,
         password: Faker::Internet.password
-    }.to_json
+      }.to_json
     end
 
     # set request.headers to our custom headers
