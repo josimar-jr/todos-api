@@ -64,3 +64,7 @@ bower.json
 
 #Ignore .vscode
 /.vscode
+db/development.sqlite3
+db/test.sqlite3
+log/development.log
+tmp/pids/server.pid
