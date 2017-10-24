@@ -5,7 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
+/.bundle 
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -14,8 +14,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
-!/log/.keep
-!/tmp/.keep
+!/log/*
+!/tmp/*
 
 *.rbc
 capybara-*.html
@@ -64,3 +64,7 @@ bower.json
 
 #Ignore .vscode
 /.vscode
+db/development.sqlite3
+db/test.sqlite3
+log/development.log
+tmp/pids/server.pid
