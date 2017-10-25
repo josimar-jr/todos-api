@@ -1,5 +1,5 @@
 # app/controllers/todos_controller.rb
-module V1
+module v1
   class TodosController < ApplicationController
     before_action :set_todo, only: [:show, :update, :destroy]
 
