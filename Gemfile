@@ -29,6 +29,9 @@ gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'b
 # Json Web Token
 gem 'jwt'
 
+# active model serializer
+gem 'active_model_serializers', '~>0.10.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
