@@ -32,6 +32,12 @@ gem 'jwt'
 # active model serializer
 gem 'active_model_serializers', '~>0.10.0'
 
+# pagination
+gem 'will_paginate', '~>3.1.0'
+
+# help create data for tests and seed
+gem 'faker'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -44,7 +50,6 @@ end
 group :test do
   gem 'factory_girl_rails', '~> 4.0'
   gem 'shoulda-matchers', '~> 3.1'
-  gem 'faker'
   gem 'database_cleaner'
 end
 
