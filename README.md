@@ -1,38 +1,20 @@
 # todos-api
 tutorial para api com ruby on rails
+https://scotch.io/tutorials/build-a-restful-json-api-with-rails-5-part-one
+https://scotch.io/tutorials/build-a-restful-json-api-with-rails-5-part-two
+https://scotch.io/tutorials/build-a-restful-json-api-with-rails-5-part-three
 
 # README
+* Ruby version > ruby 2.2.6p396 (2016-11-15 revision 56800) [x64-mingw32]
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Rails version > Rails 5.1.4
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-
-running the TEST commands
+Running the TEST
 ```
 bundle install
 rails db:migrate
 rake db:test:prepare
+rails db:seed
 bundle exec rspec
 ```
 
