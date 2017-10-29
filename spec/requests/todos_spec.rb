@@ -10,6 +10,7 @@ RSpec.describe 'Todos API', type: :request do
 
   #authorize request
   let(:headers) { valid_headers }
+  let(:headers_v2) { valid_headers_v2 }
 
   # Test suite for GET /todos
   describe 'GET /todos' do
@@ -109,6 +110,23 @@ RSpec.describe 'Todos API', type: :request do
 
     it 'returns status code 204' do
       expect(response).to have_http_status(204)
+    end
+  end
+
+  # Test /todos v2
+  describe 'v2 GET /todos' do
+    # make HTTP get request before each example
+    before { get '/todos', params: {}, headers: headers_v2 }
+
+    it 'returns todos' do
+      # Note `my_json` is a custom helper to parse JSON responses
+      expect(my_json).not_to be_empty
+      expect(my_json['message']).to match(/Hello there/)
+      expect(my_json['message']).to eq("Hello there")
+    end
+
+    it 'returns status code 200' do
+      expect(response).to have_http_status(200)
     end
   end
 end
