@@ -19,7 +19,8 @@ gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'b
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+gem 'rack-cors'
+
 # Json Web Token
 gem 'jwt'
 # active model serializer
